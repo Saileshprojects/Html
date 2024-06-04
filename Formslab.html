@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
+    <style>
+        *{
+            font-family: sans-serif;
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+       
+        .box1{
+            width: 40%;
+            margin: 5% auto;
+            padding: 50px;
+            background-color: rgb(57, 57, 190);
+            font-family: sans-serif;  
+        }
+        .txt{
+            width: 70%;
+            padding: 15px;
+            border-radius: 5px;
+            border: none;
+        }
+        #btn:hover{
+            box-shadow: -5px 5px 10px lightblue;
+            color: rgb(57, 57, 250);
+            
+        }
+        .box2{
+            width: 30%;
+            margin: 5% auto;
+            padding: 50px 0px;
+            background-color: whitesmoke;
+            font-family: sans-serif;   
+            border: 1px solid gainsboro; 
+            border-radius: 10px; 
+        }
+        .txt1{
+            width: 90%;
+            padding: 15px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(216, 216, 231);
+        }
+        #sgnup:hover{
+            box-shadow: -5px 5px 10px gainsboro;
+            color:black
+            
+        }
+        #btn1{
+            background-color: rgb(128, 128, 229);
+            color: white;
+        }
+       #txt1{
+            width: 90%;
+            padding: 12px 0px 12px 40px;
+            border-radius: 5px;
+            border: none;
+            background: url(./Images/nexzera/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg);
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color:white;
+       }
+       #txt2{
+            width: 90%;
+            padding: 12px 0px 12px 40px;
+            border-radius: 5px;
+            border: none;
+            background: url(./Images/nexzera/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg);
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color:white;
+       }
+       #txt3{
+            width: 90%;
+            padding: 12px 0px 12px 40px;
+            border-radius: 5px;
+            border: none;
+            background: url(./Images/nexzera/email.png);
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: white;
+       }
+    .box3{
+             width: 40%;
+            margin: 0px auto;  
+           
+    }
+   .con{
+            width: 10%; 
+            margin: 0px auto;
+            padding: 5% 10%;
+            background-color: violet;
+   }
+   .box4{
+            width: 30%;
+            margin: 5%;
+            padding: 50px 0px;
+            font-family: sans-serif;   
+            border: 1px solid gainsboro; 
+            border-radius: 10px;
+            /*  background-color: yellow;  */
+           /* transform: skewY(-25deg); */
+   }
+   .box5{
+    
+            width: 30%;
+            margin: 5%;
+            padding: 50px 0px;
+            background-color: whitesmoke;
+            font-family: sans-serif;   
+            border: 1px solid gainsboro; 
+            border-radius: 10px; 
+            background-color: rgb(148, 127, 127);
+   }
+   [type=radio]{
+        accent-color: blue ;
+   }
+    [type=text]{
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+    }
+   
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        background-color: rgb(159, 187, 228,0.5);
+    }
+    table, tr {
+        border: 1px dotted;
+    }
+    table, th {
+        padding: 15px;
+    }
+    .input:focus{
+        outline: none;
+    }
+  
+    </style>
+</head>
+<body>
+    <!-- form 1 -->
+    <div class="box1">
+        <h2 style="color: whitesmoke; text-align: center;">Login</h2> 
+        <form action="./form"  method="get" style="margin:5% 0px 5% 20%;">
+            <input type="text" name="Email" class="txt" placeholder="Your Emali *"> <br><br>
+            <input type="password" name="paas"  placeholder="Your password *" style=" width: 70%; padding: 10px; border-radius: 5px; border: none;"> <br><br>
+            <input type="submit" value="Login" id="btn" style="padding: 10px 20px; border: none; border-radius: 10px; width: 30%; "><br><br> 
+            <p style="color: whitesmoke; font-size: 1em; margin-top: 0%; ">Forget Password ?</p>
+        </form> 
+    </div>
+   <!-- Form 2 -->
+    <div class="box2">
+        <div style="padding: 0px 30px;">
+            <h1 style="color: black; display: inline-block;">Sign in</h1> 
+            <input type="button" value="Sign up" id="sgnup" style=" margin-top: 5%; padding: 10px; border: 1px solid rgb(171, 171, 230); border-radius: 8px; width: 20%; float: right; color: blue;"><br><br> 
+            <div style="clear:right;"></div>
+        </div>
+            <form action="./form"  method="get" style="margin:20px;">
+                <label for="E"> Your Email</label> <br><br>
+                <input type="text" name="Email" class="txt1" id="E"  placeholder="Your Emali *" style="background-color: gainsboro;"> <br><br>
+                <label for="P"> Your Password</label> <p style="float: right; color: blue; margin-top: 0px;" >Forget ?</p> <br><br>
+                <input type="password" name="paas" id="P" placeholder="Your password *" style=" width: 90%; padding: 10px; border-radius: 5px; border: none; background-color: gainsboro" > <br><br>
+                <input type="checkbox" name="Save Pass" id=""> Save password <br><br>
+                <input type="submit" value="Login" id="btn1" style="padding: 15px 20px; border: none; border-radius: 8px; width: 95%; "><br><br> 
+            </form> 
+        <div style="clear:right;"></div>
+    </div>
+<!-- form 3 -->
+   
+<div class="box2" style=" width: 65%; padding: 20px 50px; text-align: center; background-color: rgb(231, 87, 35); background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('./Images/nexzera/pexels-pixabay-326058.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover; box-sizing: border-box; padding: 15px;">
+    <div style=" padding: 0px 30% ; ">
+        <div style="background-color: rgba(73, 70, 70, 0.5); padding: 25px 20px; ">
+            <h1 style="color: white; text-align: center;">SIGN UP </h1> 
+                <div style="text-align: center; padding: 10px;">
+                    <i class="fa-brands fa-square-facebook" style="border-radius: 180px; padding: 20px; color: rgb(6, 6, 190); background-color: white; border: none; font-size: larger;"></i> &nbsp;&nbsp;
+                    <i class="fa-brands fa-twitter" style="border-radius: 180px; padding: 20px; color:blue; background-color: white; border: none;  font-size: xx-large;"></i>&nbsp;&nbsp;
+                    <i class="fa-brands fa-google-plus-g" style="border-radius: 180px; padding: 20px; color: red; background-color: white; border: none; font-size: larger;"></i>
+                </div><br> 
+
+                 <form action="./form"  method="get" style="margin:20px;">
+                        <input type="text" name="fstname" id="txt1" placeholder="First Name..">
+                    <br><br>
+                    <input type="text" name="Lstname"  id="txt2"  placeholder="Last Name.."> <br><br>
+                    <input type="text" name="Email"     id="txt3" placeholder="Emali.."> <br><br><br>
+                    <div style="text-align: center;">
+                        <input type="submit" value="Get started" id="btn1" style="padding: 15px 20px; border: none; border-radius: 50px; width: 50%; background-color: white; color: red; font-size: 1.2em ;">
+                    </div>
+                </form>  
+        </div>
+    </div>
+</div>
+
+    <!-- form 4 -->
+    <div class="box3" style="background:linear-gradient(to top, violet, rgb(153, 238, 220)); padding: 50px;">
+        <h2 style="color: blue; text-align: center;">Subscribe</h2> 
+            <form action="./form"  method="get">
+                <i class="bi bi-person-fill"></i> 
+                    <input type="text" name="name" class="input" placeholder="Your name" style=" padding: 10px; background: none; border: none; width: 90%;"> 
+                        <hr style="margin-top: 0px; width: 92%;"> <br><br>
+                        <i class="bi bi-envelope-fill"></i>
+                    <input type="email" name="Email" class="input" placeholder="Your email" style=" padding: 10px; background: none; border: none; width: 90%;"> 
+                    <hr style="margin-top: 0px; width: 92%;">   <br><br> 
+                    <div style="text-align: center;">        
+                        <button style="padding: 10px 20px; background-color: rgb(70, 70, 235); border: none; color: white;">SEND <i class="bi bi-send"></i></button> <br><br>
+                    </div>
+            </form>  
+    </div>
+    <br><br><br><br>
+   <!-- form 5 -->
+   <div style=" display: flex; width: 50%; margin: 0px auto;">
+   <div style="padding: 0px 30px;  position: relative; overflow: hidden; ">
+        <div style=" background-color: aqua;  padding: 43%; position: absolute; transform: skewY(-8deg); z-index: -1; left: 7%; top: -25%; " ></div>
+        <div style="padding: 80px ;  border: 1px solid; "> <h1 style="text-align: center;">Login Form</h1>
+                <br><br>
+                <form action=" ./.process" method="get">
+                    <div style="text-align: left;">    <label for="em">Email Address</label> <br></div>
+                    <input type="email" name="email" id="em" placeholder="Enter vaild email address" style="padding: 10px; border: none; border-radius: 15px; box-shadow: 5px 5px 5px gray; width: 100%; background-color: rgba(5, 209, 5,0.5);"> <br><br><br>
+                    <div style="text-align: left;"> <label for="ps">Password</label> <br> </div> 
+                    <input type="password" name="passwrd" id="ps" placeholder="please provide password" style="padding: 10px; border: none; border-radius: 15px; box-shadow: 5px 5px 5px gray; width: 100%; background-color: rgba(5, 209, 5,0.5);"> <br><br><br>
+                    <div style="text-align: center;">
+                        <button style="padding: 8px 25px; border-radius: 10px; border: none; box-shadow: 5px 5px 5px gray; background-color: rgba(5, 209, 5,0.5);">Submit</button>
+                    </div>
+                </form>
+        </div>
+    </div> 
+           &nbsp;&nbsp;&nbsp;<hr> &nbsp;&nbsp;&nbsp;
+      
+
+
+    <div style="padding: 0px 30px; position: relative; overflow: hidden; ">
+        <div style=" background-color: aqua;  padding: 43%; position: absolute; transform: skewY(-8deg); z-index: -1; left: 7.2%; bottom: -35%;" ></div>
+        <div style="  border: 1px solid;">
+            <div style="padding: 80px 80px;">
+                <h1 style="text-align: center;">Login Form</h1>
+                <br><br>
+                <form action="./process" method="get">
+                    <div style="text-align: left;">    <label for="em">Email Address</label> <br></div>
+                    <input type="email" name="email" id="em" placeholder="Enter vaild email address" style="padding: 10px; border: none;  border-radius: 15px; box-shadow: 5px 5px 5px gray; width: 100%; background-color: rgba(5, 209, 5,0.5);"> <br><br><br>
+                    <div style="text-align: left;"> <label for="ps">Password</label> <br> </div> 
+                    <input type="password" name="passwrd" id="ps" placeholder="please provide password" style="padding: 10px; border: none; border-radius: 15px; box-shadow: 5px 5px 5px gray; width: 100%; background-color: rgba(5, 209, 5,0.5);"> <br><br><br>
+                    <div style="text-align: center;">
+                        <button style="padding: 8px 25px; border-radius: 10px; border: none; box-shadow: 5px 5px 5px gray; background-color: rgba(5, 209, 5,0.5);">Submit</button>
+                    </div>
+                </form> 
+            </div>
+        </div>           
+    </div>
+</div>
+
+<br><br><br><br><br><br><br><br><br>
+<!-- form 6 -->
+        <div style="width: 25%; margin: 0px auto; background-color: lightgray; border-radius: 15px;">
+            <div style="padding: 10%; ;">
+                <h2 style="text-align: center;">Form</h2><br>
+                <div style="padding: 20%; margin: 0px auto; background: url(./Images/nexzera/clipart-profil-1.png);
+                    background-position: center; background-repeat: no-repeat; background-size: contain; " ></div><br> 
+                <form action="./process" method="get">
+                            <label for="fn">Full Name:</label> <br><br>
+                                <input type="text" name="fn" id="N" placeholder="Enter Your Full Name" size="45" style=" padding: 8px; border-radius: 5px;border: none; "><br><br>
+                                    <label for="e">Email:</label> <br><br>
+                                        <input type="text" name="email" id="e" placeholder="Enter Your Email" size="45" style=" padding: 8px; border-radius: 5px;border: none;"><br><br>
+                                    <label for="p">Password:</label> <br><br>
+                                <input type="text" name="pass" id="p" placeholder="Enter  password" size="45" style=" padding: 8px; border-radius: 5px;border: none; " ><br><br>
+                            <label for="g">Gender:</label> <br><br>
+                        <input type="radio" name="rad" id="g" checked> Male <input type="radio" name="rad" id="g"> Female  <input type="radio" name="rad" id="g"> Others <br><br><br>
+                        <input type="submit" value="Submit"  style="width: 38vh; padding: 10px 20px; border: none; border-radius: 5px; background-color: rgb(16, 16, 185); color: white; "><br><br> 
+                </form>
+            </div>
+        </div>
+        <br><br><br><br>
+
+        <!-- form 7 -->
+        <div style="margin: 0px auto; width: 70%;">
+        <div style="text-align: center;" >
+          <h3>High School Admission Recommendation Form</h3>
+        </div>
+        <div style="border: 1px solid silver; padding: 10px; background-color: rgb(221, 222, 224,0.8); border-radius: 5px;">
+            <h4 style="color: rgb(75, 112, 235);">Section I: TO BE COMPLETED BY APPLICANT</h4>
+        </div>
+        <div style="padding: 40px 20px 85px 20px ; background-color: rgb(196, 192, 196); border-radius: 5px; border: 1px solid silver;  overflow: hidden;" >
+            <form action="./process" method="get" style="padding: 0px 10px;">
+                    <div style="display: inline-block;">
+                        <label for="ln"> Last Name</label><br>
+                        <input type="text" name="LastName" id="ln" size="50" >
+                    </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div style="display: inline-block;">
+                            <label for="fn"> First Name</label> <br>
+                            <input type="text" name="Firstame" id="fn" size="50" >
+                        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div style="display: inline-block;">
+                                <label for="m"> Middle</label> <br>
+                                <input type="text" name="Middle" id="m" size="5" >
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div style="display: inline-block;">
+                                    <label for="db"> Date Of Birth</label> <br>
+                                    <input type="date" name="" id="db" style="padding: 8px;" >
+                                </div><br><br><br>
+                            <div style="display: inline-block;">
+                                <label for="m">Mailing Address</label><br>
+                                <input type="text" name="mail" id="m" size="50" >
+                            </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div style="display: inline-block;">
+                            <label for="c">City</label><br>
+                            <input type="text" name="City" id="c"  >
+                        </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div style="display: inline-block;">
+                        <label for="s">State</label><br>
+                        <input type="text" name="State" id="s" size="25" >
+                    </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div style="display: inline-block;">
+                    <label for="z">Zip Code</label><br>
+                    <input type="number" name="zip" id="z" size="8"  style="padding: 10px; border: none; border-radius: 5px;">
+                </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><br><br>
+            <div style="display: inline-block;">
+                <label for="h">High School Collage/Name</label><br>
+                <input type="text" name="hsc" id="h" size="150" >
+            </div>  
+            </form>
+        </div>
+    </div>
+    <br><br>
+
+        <div style="margin: 0px auto; width: 70%;">
+    <div style="border: 1px solid silver; border-radius: 5px; padding: 10px; background-color: rgb(239, 245, 245);">
+        <h4 style="color: rgb(75, 112, 235);">Section II: TO BE COMPLETED BY TEACHER OR INSTRUCTOR</h4>
+    </div>
+    <div style="padding: 20px; background-color: rgb(218, 212, 212); border: 1px solid silver; border-radius: 5px; overflow: hidden;" >
+       <p style="line-height: 1.5; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Numquam accusantium, molestiae eaque placeat ullam tempora ab beatae, 
+        delectus incidunt iure provident quos harum? Quo sint tenetur magnam. 
+        Sit, excepturi ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Nostrum, eum tempora qui reiciendis officia accusamus labore ipsam quidem molestiae
+        eos ipsa itaque repudiandae, placeat amet at nulla fugit, ea est! </p><br>
+        <form action="./process" method="get" style="padding: 0px 10px;">
+                <div style="display: inline-block;">
+                    <label for="ln"> Last Name</label><br>
+                    <input type="text" name="LastName" id="ln" size="45" style=" border: none; border-radius: 5px;">
+                </div> &nbsp;&nbsp;&nbsp;
+                    <div style="display: inline-block;">
+                        <label for="fn"> First Name</label> <br>
+                        <input type="text" name="Firstame" id="fn" size="45" >
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div style="display: inline-block;">
+                            <label for="m"> Middle</label> <br>
+                            <input type="text" name="Middle" id="m" size="45" >
+                        </div><br><br><br>
+                            <div style="display: inline-block;">
+                                <label for="m">Position</label><br>
+                                <input type="text" name="mail" id="m" size="35" >
+                            </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div style="display: inline-block;">
+                                    <label for="c">Department</label><br>
+                                    <input type="text" name="City" id="c" size="35" >
+                                </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div style="display: inline-block;">
+                                        <label for="z">School/Organization</label><br>
+                                        <input type="text" name="zip" id="z" size="63"  >
+                                    </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><br><br>
+                                <div style="display: inline-block;">
+                                    <label for="m">School/Organization Address</label><br>
+                                    <input type="text" name="mail" id="m" size="50" >
+                                </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div style="display: inline-block;">
+                                <label for="c">City</label><br>
+                                <input type="text" name="City" id="c"  >
+                            </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div style="display: inline-block;">
+                            <label for="s">State</label><br>
+                            <input type="text" name="State" id="s" size="25" >
+                        </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div style="display: inline-block;">
+                        <label for="z">Zip Code</label><br>
+                        <input type="number" name="zip" id="z" size="8"  style="padding: 10px; border: none; border-radius: 5px;">
+                    </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><br><br>
+    </form>
+    </div>
+</div>
+</div>
+<br><br><br><br><br>
+                     
+    <!-- form 8 -->
+        <div style="width: 70%; padding:20px; margin: 0px auto; background-color: rgb(199, 197, 197,0.7); border-radius: 5px;">
+             <div style="margin: 0px auto;">
+                <form action="./process" method="get">
+                    <div style="display: inline-block;">
+                        <label for="ci">Contact Information(Phone Number)</label> <br>
+                            <input type="text" name="Contact" id="ci" size="60" style="border: 1px solid gray; ">
+                    </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div style="display: inline-block;">
+                            <label for="fxn">Fax Number</label> <br>
+                            <input type="text" name="Fax" id="fxn" size="35" style="border: 1px solid gray; ">
+                        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div style="display: inline-block;">
+                                <label for="eml">Email</label> <br>
+                                <input type="email" name="Email" id="eml" size="45" style="border: 1px solid gray; padding: 10px; border-radius: 5px; ">
+                            </div> <br><br><br>
+                                <div>
+                                    <p>Please mark the appropriate box that best describes this candidate</p>
+                                </div> <br>
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <th></th>
+                                            <th style="padding: 20px;">EXCELLENT</th>
+                                            <th>GOOD</th>
+                                            <th>AVERAGE</th>
+                                            <th>BELOW AVERAGE</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Academic Background</th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                        </tr>
+                                        <tr>
+                                            <th>Artistic Skills</th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                        </tr>
+                                        <tr>
+                                            <th>Character</th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                        </tr>
+                                        <tr>
+                                            <th>Ambition</th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                        </tr>
+                                        <tr>
+                                            <th>Emotional stability</th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                        </tr>
+                                        <tr>
+                                            <th>Ability to work with others</th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                        </tr>
+                                        <tr>
+                                            <th>Communication Skills</th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox"></th>
+                                        </tr>
+                                    </table>
+                                </div> <br>
+                                <p>Comments (Please feel free to attach a letter or document):</p> <br>
+                               <textarea name="cmnts" id="" cols="177" rows="10"></textarea><br><br> 
+                               <p style="display: inline-block;">I Recommend this candidate:</p> <input type="checkbox" name="" id="wr"> <label for="wr"> With Reservation</label> &nbsp;
+                               <input type="checkbox" name="" id="fs"> <label for="fs"> Fairly Strong</label> &nbsp;
+                               <input type="checkbox" name="" id="stg"> <label for="stg">Strong</label> &nbsp;
+                               <input type="checkbox" name="" id="encly"> <label for="encly"> Enthusiastically</label> &nbsp; 
+              </form>
+            </div>   
+        </div> <br>
+    <div style="width: 70%; margin: 0px auto; text-align: right;">
+            <button style="padding: 12px 20px ; border-radius: 5px; border: none; border: 1px solid; background-color: green; color: white;"> <i class="bi bi-floppy2-fill"></i> Save</button>
+            <button style="padding: 10px 20px ; border-radius: 5px; border: none; border: 1px solid; background-color: rgb(168, 128, 53); color: white;"> <i class="bi bi-arrow-up-short" style="font-size: 1.2em;"></i> Top</button>
+    </div> <br><br><br><br>
+</body>
+</html>

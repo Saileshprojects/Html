@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SCDC Home Page </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./CSS/SCDC.css">
+    <link rel="icon" href="./Images/webresources/scdc-images/scdclogo.gif">
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        margin: 0px;
+        padding: 0px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        
+
+    }
+    nav{
+        
+        padding: 0px;
+        background-color: #f8f9fa ;
+    }
+   
+    nav h1{
+            margin:auto;
+            text-transform: capitalize;
+            display: inline-block;
+            font-weight: 400;
+           margin-left: 1.25rem;
+            font-size: 1.25rem;
+        }
+
+    nav ul{
+        list-style: none;
+        display: inline-block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li{
+        display: inline-block;
+        padding: 8px;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: rgb(88, 86, 86);
+    }
+    #hdcon{
+        background-image: url(./Images/webresources/scdc-images/board.jpg);
+        height: 650px;
+        
+    }
+    header{
+        padding: 150px;
+        background-color: rgba(0,0,0,0.5);
+        text-align: center;
+        color: white;
+        height: 650px;
+    }
+    header img{
+        width: 15%;
+    }
+    #txtbox{
+        padding: 2% 5%;
+        text-align: center;
+    }
+    #txtbox p{
+        padding: 0% 10%;
+        text-align: justify;
+        font: 1.1em verdana;
+        line-height: 1.5;
+    }
+    button{
+        padding: 10px; 
+        border: 1px solid white; 
+        border-radius: 5px; 
+        background-color: rgb(42, 42, 185); 
+        color: white; 
+        border: none;
+    }
+    #img{
+         background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./Images/webresources/scdc-images/whiteboard.jpg);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    #txtbox1{
+        padding: 6% 5%;
+        text-align: center;
+    }
+    #txtbox1 p{
+        padding: 2% 10%;
+        text-align: justify;
+        font: 1.1em verdana;
+        line-height: 1.5;
+        
+        
+    }
+    #cimg {
+        padding: 20px;
+        display: grid; 
+        grid-template-columns: repeat(2,auto);
+    }
+    #cimg img{
+        width: 65%;
+        border: 0px solid gray;
+        border-radius: 15px;
+        margin-left: 80px;
+    }
+   
+   
+    .boxes{
+        text-align: center; 
+        width: 60%; 
+        margin-left: 20%;
+    }
+    
+    .boxes h2{
+            border: 0.1px solid gray; 
+            padding: 10px; 
+            margin-bottom: 0px;  
+            background-color: rgb(245, 235, 235); 
+            border-top-left-radius: 8px; 
+            border-top-right-radius: 8px;
+        }
+    
+    .boxes p{
+            border: 1px solid rgb(68, 56, 56); 
+            margin-top: 0px; 
+            text-align: justify; 
+            padding: 30px; 
+            border-bottom-left-radius: 8px; 
+            border-bottom-right-radius: 8px;
+
+    }
+    #ournks{
+            background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./Images/webresources/scdc-images/student1.jpg); 
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            background-attachment: fixed;
+    }
+    .ftr1{
+        display: grid; 
+        grid-template-columns: repeat(3, auto); 
+        text-align: center;
+    }
+   
+
+    #lst{
+        padding-left: 0px;
+    }
+    #lst li{
+        padding: 0px 10px;
+        display: inline-block;
+    }
+
+    @media (max-width:720px){
+        nav{
+            text-align: center;
+        }
+       header img {
+        min-width: 150px;
+       }
+        header { padding: 0px;
+            text-align: center;
+            padding-top: 35%;  
+        }
+        #cimg{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        .ftr1{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+   
+</style>
+<body>
+    <!-- begg of navbar-->
+    <nav>
+        <h1>Sree chaitanya degree college</h1>
+        
+       <ul>
+        <li><a href="./Index.html"><i class="bi bi-house-fill"></i></a>&nbsp &nbsp<a href="./Index.html">Home</a></li>
+        <li><a href="./About.html">About</a></li>
+        <li><a href="./Academics.html">Academics</a></li>
+        <li><a href="./Facilities.html">Facilities</a></li>
+        <li><a href="./Placements.html">Placements</a></li>
+        <li><a href="./Gallery.html">Gallery</a></li>
+        <li><a href="./Media.html">Media</a></li>
+       </ul>
+    </nav>
+    <!-- End of navbar-->
+         <!-- begg of Header-->
+    <div id="hdcon">
+    <header>
+        <img src="./Images/webresources/scdc-images/scdclogo.gif">
+        <h1 style="margin-bottom: 2px;">Sree Chaitanya Degree College</h1>
+        <h4 style="font-weight: 100; margin-bottom: 6px; margin-top: 4px;">(Affiliated to Vikrama Simhapuri University)</h4>
+        <h3 style="font-weight: 600; margin-top: 6px; margin-bottom: 4px; ">Dream Destination to Quality Education</h3>
+        <p style="font-weight: 300; margin-top: 0px;">Co-operative colony, Kavali.<p>
+    </header>
+</div>
+ <!-- End of Header-->
+         <!-- begg of Section1-->
+         <section id="txtbox">
+           <h2 style="font-weight: 500; margin-bottom: 0px;">Great Place to Learn</h2> 
+           <hr width="5%" size="2" color="red">
+           <p>At Sree Chaitanya Degree College, we equip students with 28 spacious classrooms, computer labs with 60 computers with internet facility like no other college in the surrounding areas of Kavali, prodigious seminar hall with capacity of holding 150 students at a time, a library contained with 5000 volumes and well equipped physics, chemistry and biotechnology laboratories. Needless to say that we make it a great place to learn. 
+        </p>
+        <br>
+        <button>Learn More...</button>
+         </section> 
+          <!-- End of Section1-->
+
+            <!-- begg of Section2-->
+                <div id="img">
+                    <section id="txtbox1">
+                        <div style="padding:2% 10%;">
+                            <div style="background-color:rgba(255,255,255,0.7); padding: 20px; color: black;">
+                                <h2 style="font-weight: 500; margin-bottom: 0px; font-family: sans-serif;">Behind Our Success...</h2> 
+                                <hr width="5%" size="2" color="black">
+                                <p>Our success is the amalgamation of parallel efforts put forth by our management to mold students into industry standard outcomes and our students who made this possible by believing in us and coordinating their support since the day one.
+                                </p>
+                                <button>Learn More...</button>
+                            </div>
+                        </div>
+                    </section> 
+                 </div>
+            <!-- End of Section2-->
+
+            <!-- begg of section 3-->
+            <section id="msion">
+                <h2 style="text-align: center;">Our Mission and Vision</h2>
+                <hr width="5%" size="2" color="red">
+            </div>
+                <div id="cimg">
+                    <img src="./Images/webresources/scdc-images/correspondent.jpg">
+                <div id="con">
+                    <div class="boxes">
+                        <h2>Our Mission</h2>
+                        <p>To foster quality and valued based education with corporate standards affordable to urban and rural youth equally and embolden the innate capabilities of the students for a better society.</p>
+                    </div>
+                    <div class="boxes">
+                        <h2>Our Vision</h2>
+                        <p>To create a tomorrow with blooming talents, to embed them with confidence to catch their dreams and pave esplanade path to success.</p>
+                    </div>
+                </div>
+            </div>
+
+            </section>
+            
+            <!-- End of Section3-->
+
+            <!--begg of section 4-->
+            <section id="ournks">
+                    <div id="incon" style="color: black; padding: 80px; background-color: transparent;">
+                        <div style=" background-color: rgba(0, 0, 0, 0.5); padding: 20px; margin: 10px 5px; width: 50%; margin-left: 23%;">
+                        <div id="rnk" style=" text-align: center;  ">
+                            <h2 style="color: whitesmoke; margin-bottom: 0px;">Our Rankers</h2>
+                            <hr width="10%" size="2" color="gray">
+                            <div id="imgs" style=" background-color: rgba(245, 245, 245, 0.527); padding: 0px; display: grid; grid-template-columns: repeat(4,auto); width: auto; height:fit-content; margin-top: 5%;">
+                                <img src="./Images/webresources/scdc-images/rankers/1.jpg" alt="Rankers" style="width: 200px; height: 150px;">
+                                <img src="./Images/webresources/scdc-images/rankers/2.jpg" alt="Rankers" style="width: 210px; height: 150px;" >
+                                <img src="./Images/webresources/scdc-images/rankers/3.jpg" alt="Rankers"style="width: 200px; height: 150px;" >                            
+                                <img src="./Images/webresources/scdc-images/rankers/4.jpg" alt="Rankers" style="width: 200px; height: 150px;">
+                                <img src="./Images/webresources/scdc-images/rankers/5.jpg" alt="Rankers" style="width: 200px; height: 150px;">
+                                <img src="./Images/webresources/scdc-images/rankers/6.jpg" alt="Rankers" style="width: 200px; height: 150px;">
+                                <img src="./Images/webresources/scdc-images/rankers/7.jpg" alt="Rankers" style="width: 200px; height: 150px;">
+                                <img src="./Images/webresources/scdc-images/rankers/8.jpg" alt="Rankers" style="width: 200px; height: 150px;">
+                                <img src="./Images/webresources/scdc-images/rankers/9.jpg" alt="Rankers" style="width: 200px; height: 150px;">
+                                <img src="./Images/webresources/scdc-images/rankers/10.jpg" alt="Rankers" style="width: 200px; height: 150px;">
+                                <img src="./Images/webresources/scdc-images/rankers/11.jpg" alt="Rankers" style="width: 200px; height: 150px;">
+                                <img src="./Images/webresources/scdc-images/rankers/12.jpg" alt="Rankers" style="width: 200px; height: 150px;">
+                                <img src="./Images/webresources/scdc-images/rankers/13.jpg" alt="Rankers" style="width: 200px; height: 150px;">
+                                <img src="./Images/webresources/scdc-images/rankers/14.jpg" alt="Rankers" style="width: 200px; height: 150px;">
+                                <img src="./Images/webresources/scdc-images/rankers/15.jpg" alt="Rankers" style="width: 200px; height: 150px;">
+                                <img src="./Images/webresources/scdc-images/rankers/16.jpg" alt="Rankers" style="width: 200px; height: 150px;">
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </section>
+            <!--End of section 4-->
+
+            <!--begg footer-->
+    <section style="background-color: rgba(0, 0, 0, 0.9); color: rgb(189, 184, 184); padding: 2% 10%;">
+                            <div class="ftr1">
+                                <div>
+                                    <h2>Our Location</h2>
+                                    <p> Sree Chaitanya Degree Collge <br>
+                                        Co-operative Colony, Kavali <br>
+                                        Andhara Pradesh-524201 
+                                    </p>
+                                </div>
+                                    <div>
+                                            <h2> We are on web</h2>
+                                            <ul id="lst" style="list-style-type: none;">
+                                                <li ><i class="bi bi-facebook" style="font-size: 2.5em;"></i></li>
+                                                <li> <i class="bi bi-google" style="font-size: 2.5em;"></i></li>
+                                                <li> <i class="bi bi-twitter" style="font-size: 2.5em;"></i></li>
+                                            </ul>
+                                    </div>
+                                            <div id="navic" style="margin-top: 10%;">
+                                               <a style="color: white;" href="./Index.html"><i class="bi bi-arrow-up-circle-fill" style="font-size: 2.5em;"></i></a>
+                                            </div>
+                            </div>
+
+                <hr width="80%">
+                                            <div class="ftr1">
+                                                    <div>
+                                                        <i class="bi bi-phone-fill"> +91 7093189376</i> 
+                                                    </div>
+                                                    <div>
+                                                    <i class="bi bi-telephone-fill"> 08626 240111</i> 
+                                                    </div>
+                                                    <div>
+                                                        <i class="bi bi-whatsapp">  +91 7093189376</i> 
+                                                    </div>
+                                            </div>
+
+                <hr width="80%">
+
+                                    <div class="ftr1">
+                                         <div style="display: inline-block;">
+                                            <h4>© 2018 Sree Chaitanya Degree College</h4>
+                                        </div>
+                                        <div></div>
+                                            <div style="float: right;">
+                                                <h4>Developed & Maintained by SCDC Students</h4>
+                                            </div>
+                                                <div style="clear: right;">
+                                                </div>
+                                    </div>
+    </section>    
+             <!--End of footer--> 
+                
+</body>
+
+</html>

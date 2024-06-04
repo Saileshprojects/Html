@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMI Calculator</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<div class="con mt-5 p-4 text-bg-dark">
+    <h1 class="text-center">Emi Calculator</h1> <br><br>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+            <!-- Loan Amount -->
+            <strong class="fs-5">Loan Amount :</strong>
+            <input type="number" id="tamt" class="form-control w-50 d-inline-block float-end"  placeholder="Ex : ₹1,00,000" autocomplete="off"><br><br><br>
+            <input type="range" name="trange" id="trange" class="form-control-range w-100" min="50000" max="4000000" value="800000" step="10000" >
+
+            <div class="d-flex justify-content-between">
+                <span>₹50K</span>        
+                <span>₹40Lac</span>
+            </div>
+            <br><br>
+             <!-- Tenure -->
+             <strong class="fs-5">Tenure  :</strong> 
+            <input type="number" id="ltnr" class="form-control w-50 d-inline-block float-end"  placeholder="Ex : 5 Years" autocomplete="off"><br><br><br>
+            <input type="range" name="range" id="rltnr" class="form-control-range w-100" min="1" max="30" value="5" step="1">
+            <div class="d-flex justify-content-between">
+                <span>1</span>        
+                <span>30</span>
+            </div>
+            <br><br>
+            <!-- annualInterestRate -->
+            <strong class="fs-5">Interest rate(%) :</strong> 
+            <input type="number" id="irate" class="form-control w-50 d-inline-block float-end"  placeholder="Ex : 12.5%" autocomplete="off"><br><br><br>
+            <input type="range" name="range" id="rrate" class="form-control-range w-100" min="10.5" max="20" value="12" step="0.5">
+            <div class="d-flex justify-content-between">
+                <span>10.5%</span>        
+                <span>20%</span>
+            </div>
+            <br><br>
+            <button type="button" id="btn" class="btn btn-outline-light w-100">Calculate</button><br><br>
+        
+        </div>
+        <div class="col-md-5" id="con">
+            
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+   
+</div>
+
+<script>
+    
+    document.getElementById("trange").onchange=function(){
+        document.getElementById("tamt").value=this.value;
+    };
+    document.getElementById("rltnr").onchange=function(){
+        document.getElementById("ltnr").value=this.value
+    };
+    document.getElementById("rrate").onchange=function(){
+        document.getElementById("irate").value=this.value
+    };
+ document.getElementById("btn").onclick=function(){
+    // P
+  var amt = document.getElementById("tamt").value;
+  
+  var tnr = document.getElementById("ltnr").value;
+ 
+  var irate = parseFloat(document.getElementById("irate").value);
+    //  R
+  var mntly_int = parseFloat( irate / 12 / 100);
+    // N
+  var mntly_tnr = tnr * 12;
+  
+
+//   P*R*(1+R)^N/[(1+R)^N-1]
+
+ var emi=amt * mntly_int * Math.pow(1 + mntly_int , mntly_tnr) / (Math.pow(1 + mntly_int , mntly_tnr) -1);
+ var res=`
+ Loan Amount : <strong class="fs-5">  ${amt} </strong>
+ <br><br><br>
+ Loan Tenure :  <strong class="fs-5"> ${tnr} Years </strong>
+ <br><br><br>
+ Intrest Rate : <strong class="fs-5"> ${irate} % </strong>
+ <br><br><br>
+ <h3 class="d-inline-block">EMI : </h3> <strong class="fs-1 text-success"> ₹ ${ Math.round(emi)} /-</strong>
+ `
+ document.getElementById("con").innerHTML=res;
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+

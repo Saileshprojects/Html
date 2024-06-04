@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+
+</script>
+<style>
+   
+</style>
+<body>
+
+    <div class="container m-5 p-4 ">
+        <form class="form-control text-bg-dark p-4">
+            <label for="txt1" class="form-label">First Name <small class="text-danger">* (As per the Aadhaar record)</small></label> <br>
+            <input type="text" name="txt" id="txt1" class="form-control w-50"> <br><br>
+
+            <label for="txt2" class="form-label">Last Name <small class="text-danger">* (As per the Aadhaar record)</small> </label> <br>
+            <input type="text" name="txt" id="txt2" class="form-control w-50"><br>
+            <input type="button" value="Submit" id="btn" class="btn btn-outline-light"><br><br>
+      
+            <label for="txt3" class="form-label">Name On card</label> <br>
+            <!--  input Group Example -->
+            <div class="input-group w-50" >
+            <input type="text" name="txt" id="txt3" class="form-control w-50 d-inline-block" readonly>
+            <span class="input-group-text">
+            <input type="button" value="Edit" class=" btn btn-outline-dark" id="btn2">
+            </span>
+            </div>
+    </form>
+   
+    </div>
+
+
+    <div class="containter m-5 p-4 bg-success">
+       <input type="text" name="t1" id="t1" class="form-control w-50 "> <br><br>
+       <input type="text" name="t2" id="t2" class="form-control w-50 "> <br>
+       <input type="button" value="Swap" id="btn3" class="btn btn-outline-light">
+    </div>
+
+    <div class="con m-5 p-4 bg-success" id="con" >
+        <input type="text" name="t1" id="tx1" class="form-control w-50 "> <br><br>
+        <input type="text" name="t2" id="tx2" class="form-control w-50 "> <br>
+        <input type="button" value="Sadd" id="btn4" class="btn btn-outline-light">
+     </div>
+    <script>
+
+       
+        $("#btn").click(function(){
+            var x = $("#txt1").val() + " "+  $("#txt2").val();
+            $("#txt3").val(x);
+        }) 
+        $("#btn2").click(function(){
+            $("#txt3").removeAttr("readonly");
+            $("#txt3").focus();
+
+        })
+// Swapping the value in textboxes
+        var x = $("#t1");
+        var y = $("#t2");
+        $("#btn3").click(function(){
+           
+        var z = x.val();
+        var p = x.val(y.val());
+        var q = y.val(z);
+
+    })
+    $("#btn4").click(function(){
+        $("#con").css({"backgroundColor":"yellow"});
+    })
+    // document.getElementById("#btn4").onclick(function(){
+    //     document.getElementById("#con").style.backgroundColor="yellow";
+    // })
+    
+
+       
+       
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

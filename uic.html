@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User interface controls </title>
+</head>
+<body>
+    <form action="./server" method="get" novalidate > 
+                     <!--text box example-->
+     Login         <input type="text" name="fname"  placeholder="TextBox"><br><br>
+    Password         <input type="password" name="pass"  placeholder="Password"> <br><br>
+    Mobile no        <input type="number" name="mbno" placeholder="cell no" > <br><br>
+                     <!--submit button example-->
+                     <input type="submit" value="Login"><br><br><br>
+
+                            <!--datalist example-->
+                                <input type="text" name="list" list="frnds" placeholder="datalist" >
+                                <datalist id="frnds">
+                                    <option value="Sailesh"> Sailesh</option>
+                                    <option value="pavan"> pavan</option>
+                                    <option value="Akhil"> Akhil</option>
+                                    <option value="Pavan bro"> Pavan  bro</option>
+                                </datalist> 
+                                <br><br>
+
+                            <!--Text Area  example-->
+                                <textarea name="" id="" cols="10" rows="20"></textarea>
+                                
+<br><br><br>
+                                 <!--DropDown  example-->
+                            <select name="Gadgets" id="" >
+                                <option value="0" selected>select Gadgets</option>
+                                <option value="50000">Laptop</option>
+                                <option value="85000">Mac</option>
+                                <option value="150000">Anroid TV</option>
+                            </select>
+                            <br><br><br>
+                            <input type="submit" value="Login">
+
+                            <!--Listbox  example-->
+                            <h1 style="position: absolute; background: linear-gradient(to right, black, blue, red ); -webkit-text-fill-color: transparent; -webkit-background-clip: text;">HI FRIENDS</h1>
+
+
+
+                    
+    </form>
+</body>
+</html>
